@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.pipeworx-io/owasp",
+  "title": "Owasp",
+  "description": "OWASP security standards: Top 10 (Web/API/LLM/Mobile), ASVS 5.0 requirements, Cheat Sheets. Keyless.",
+  "version": "0.1.0",
+  "websiteUrl": "https://pipeworx.io/packs/owasp",
+  "repository": {
+    "url": "https://github.com/pipeworx-io/mcp-owasp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://gateway.pipeworx.io/owasp/mcp"
+    }
+  ]
+}
