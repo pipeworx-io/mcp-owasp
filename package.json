@@ -1,7 +1,7 @@
 {
   "name": "@pipeworx/mcp-owasp",
   "version": "0.1.0",
-  "description": "OWASP security standards: Top 10 (Web/API/LLM/Mobile), ASVS 5.0 requirements, Cheat Sheets. Keyless.",
+  "description": "OWASP MCP — keyless.",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
