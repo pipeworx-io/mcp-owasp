@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-owasp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "OWASP MCP — keyless.",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-94bae40b2e35aad0c3600d50c8763edf1b10566b5567849e26c42aa9fb124c8f",
-    "sourceCommit": "adb69d997f82a62e8e22b594488c7d04a227db35"
+    "sourceHash": "v1-74b368e80a5feb6dccb69050c11ba32dc0f68d4ddb367badf9834a99bf2781e8",
+    "sourceCommit": "4d51421bd010ad9a322c2245b70b401604912eff"
   }
 }
