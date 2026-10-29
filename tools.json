@@ -1,0 +1,72 @@
+[
+  {
+    "name": "top10",
+    "description": "An OWASP Top 10 list with each category id, name, summary and the canonical URL. Lists: \"web\" (2021), \"api\" (2023), \"llm\" (LLM/GenAI applications 2025), \"mobile\" (2024). Use for awareness, mapping a finding to a category, or LLM-app threat modeling.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "list": {
+          "type": "string",
+          "enum": [
+            "web",
+            "api",
+            "llm",
+            "mobile"
+          ],
+          "description": "Which Top 10 (default \"web\")."
+        }
+      }
+    }
+  },
+  {
+    "name": "asvs_chapters",
+    "description": "Table of contents for the OWASP ASVS 5.0 (Application Security Verification Standard): the 17 chapters (V1–V17) with names and requirement counts per assurance level. Use to discover which chapter to pull with asvs_requirements.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  },
+  {
+    "name": "asvs_requirements",
+    "description": "Testable security requirements from OWASP ASVS 5.0, each with its verification id (e.g. \"V6.2.1\"), section, level (L1/L2/L3) and text — the citable controls layer. Filter by chapter, level and/or keyword. Use to ground a control (\"what does ASVS require for password storage?\").",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "chapter": {
+          "type": "string",
+          "description": "Chapter id like \"V6\" (Authentication). Omit to search all chapters."
+        },
+        "level": {
+          "type": "number",
+          "enum": [
+            1,
+            2,
+            3
+          ],
+          "description": "Assurance level: 1 (essential), 2 (standard), 3 (advanced). Returns requirements applicable at or below this level."
+        },
+        "query": {
+          "type": "string",
+          "description": "Keyword filter on requirement text, e.g. \"password\", \"TLS\", \"CSRF\"."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Max requirements to return (default 40, max 100)."
+        }
+      }
+    }
+  },
+  {
+    "name": "cheat_sheet",
+    "description": "OWASP Cheat Sheet Series — concise, practical defensive guidance. With a topic, returns the matching cheat sheet as Markdown (or candidate matches if ambiguous). Without a topic, lists all available cheat sheets.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "topic": {
+          "type": "string",
+          "description": "Topic or sheet name, e.g. \"SQL Injection\", \"JWT\", \"password storage\". Omit to list all sheets."
+        }
+      }
+    }
+  }
+]
